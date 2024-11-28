@@ -2,73 +2,233 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AluraBooks</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
-        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AluraBooks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+          integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <header class="header">
-  <h1><img src="img/Logo-1.png" alt="AluraBooks Logo" /></h1>
+    <h1><img src="img/Logo-1.png" alt="AluraBooks Logo"/></h1>
 </header>
 
 <body>
 <section class="banner"></section>
 <nav class="wrap">
-  <ul class="nav">
-    <li><button class="btn btn-front" href="#" id="btnFilterFrontBooks" value="front-end">FRONT-END BOOKS</button>
-    </li>
-    <li><button class="btn btn-back" href="#" id="btnFilterBackBooks" value="back-end">BACK-END BOOKS</button>
-    </li>
-    <li><button class="btn btn-data" href="#" id="btnFilterDataBooks" value="data">DATA BOOKS</button></li>
-    <li><button class="btn btn-available" href="#" id="btnAvailableBooks">AVAILABLE BOOKS</button></li>
-    <li><button class="btn btn-sort" href="#" id="btnSortByPrice">SORT BY PRICE</button></li>
-  </ul>
+    <ul class="nav">
+        <li>
+            <button class="btn btn-front" href="#" id="btnFilterFrontBooks" value="front-end">FRONT-END BOOKS</button>
+        </li>
+        <li>
+            <button class="btn btn-back" href="#" id="btnFilterBackBooks" value="back-end">BACK-END BOOKS</button>
+        </li>
+        <li>
+            <button class="btn btn-data" href="#" id="btnFilterDataBooks" value="data">DATA BOOKS</button>
+        </li>
+        <li>
+            <button class="btn btn-available" href="#" id="btnAvailableBooks">AVAILABLE BOOKS</button>
+        </li>
+        <li>
+            <button class="btn btn-sort" href="#" id="btnSortByPrice">SORT BY PRICE</button>
+        </li>
+    </ul>
 </nav>
+
 <section class="books wrap" id="books">
-<!--  <div class="book">-->
-<!--    <img class="book__image" src="images/Cangaceiro-Javascript.png" alt="Cover of the book Cangaceiro JavaScript" />-->
-<!--    <h2 class="book__title">-->
-<!--      Cangaceiro JavaScript:-->
-<!--      An Adventure in the Programming Hinterland-->
-<!--    </h2>-->
-<!--    <p class="book__description">Flávio Almeida</p>-->
-<!--    <p class="book__price" id="price">$29.90</p>-->
-<!--    <div class="tags">-->
-<!--      <span class="tag">Front-end</span>-->
+<!--    &lt;!&ndash;  <div class="book">&ndash;&gt;-->
+<!--    &lt;!&ndash;    <img class="book__image" src="images/Cangaceiro-Javascript.png" alt="Cover of the book Cangaceiro JavaScript" />&ndash;&gt;-->
+<!--    &lt;!&ndash;    <h2 class="book__title">&ndash;&gt;-->
+<!--    &lt;!&ndash;      Cangaceiro JavaScript:&ndash;&gt;-->
+<!--    &lt;!&ndash;      An Adventure in the Programming Hinterland&ndash;&gt;-->
+<!--    &lt;!&ndash;    </h2>&ndash;&gt;-->
+<!--    &lt;!&ndash;    <p class="book__description">Flávio Almeida</p>&ndash;&gt;-->
+<!--    &lt;!&ndash;    <p class="book__price" id="price">$29.90</p>&ndash;&gt;-->
+<!--    &lt;!&ndash;    <div class="tags">&ndash;&gt;-->
+<!--    &lt;!&ndash;      <span class="tag">Front-end</span>&ndash;&gt;-->
+<!--    &lt;!&ndash;    </div>&ndash;&gt;-->
+<!--    &lt;!&ndash;  </div>&ndash;&gt;-->
+
+<!--    &lt;!&ndash;  <div class="book">&ndash;&gt;-->
+<!--    &lt;!&ndash;    <img class="book__image unavailable" src="images/O-Retorno-do-cangaceiro-JavaScript.png"&ndash;&gt;-->
+<!--    &lt;!&ndash;         alt="Cover of the book The Return of the Cangaceiro JavaScript" />&ndash;&gt;-->
+<!--    &lt;!&ndash;    <h2 class="book__title">&ndash;&gt;-->
+<!--    &lt;!&ndash;      Cangaceiro JavaScript +:&ndash;&gt;-->
+<!--    &lt;!&ndash;      The Return of the Cangaceiro JavaScript&ndash;&gt;-->
+<!--    &lt;!&ndash;    </h2>&ndash;&gt;-->
+<!--    &lt;!&ndash;    <p class="book__description">Flávio Almeida</p>&ndash;&gt;-->
+<!--    &lt;!&ndash;    <p class="book__price" id="price">$29.90</p>&ndash;&gt;-->
+<!--    &lt;!&ndash;    <div class="tags">&ndash;&gt;-->
+<!--    &lt;!&ndash;      <span class="tag">Front-end</span>&ndash;&gt;-->
+<!--    &lt;!&ndash;    </div>&ndash;&gt;-->
+<!--    &lt;!&ndash;  </div>&ndash;&gt;-->
+
+<!--    <div class="book">-->
+<!--        <img class="book__image" src="images/The-Return-of-the-Cangaceiro-JavaScript2.png"-->
+<!--             alt="Cover of the book The Return of the Cangaceiro JavaScript: From Patterns to a Functional Approach"/>-->
+<!--        <h2 class="book__title">-->
+<!--            The Return of the Cangaceiro JavaScript:-->
+<!--            From Patterns to a Functional Approach-->
+<!--        </h2>-->
+<!--        <p class="book__description">Flávio Almeida</p>-->
+<!--        <p class="book__price" id="price">$29.90</p>-->
+<!--        <div class="tags">-->
+<!--            <span class="tag">Front-end</span>-->
+<!--            <span class="tag">Front-end</span>-->
+<!--        </div>-->
 <!--    </div>-->
-<!--  </div>-->
 
-<!--  <div class="book">-->
-<!--    <img class="book__image unavailable" src="images/O-Retorno-do-cangaceiro-JavaScript.png"-->
-<!--         alt="Cover of the book The Return of the Cangaceiro JavaScript" />-->
-<!--    <h2 class="book__title">-->
-<!--      Cangaceiro JavaScript +:-->
-<!--      The Return of the Cangaceiro JavaScript-->
-<!--    </h2>-->
-<!--    <p class="book__description">Flávio Almeida</p>-->
-<!--    <p class="book__price" id="price">$29.90</p>-->
-<!--    <div class="tags">-->
-<!--      <span class="tag">Front-end</span>-->
+<!--    <div class="book">-->
+<!--        <img class="book__image unavailable" src="images/Web-Accessibility.png"-->
+<!--             alt="Cover of the book Web Accessibility"/>-->
+<!--        <h2 class="book__title">-->
+<!--            Web Accessibility:-->
+<!--            Best Practices for Building Accessible Sites and Applications-->
+<!--        </h2>-->
+<!--        <p class="book__description">Renaldo Ferraz</p>-->
+<!--        <p class="book__price" id="price">$29.90</p>-->
+<!--        <div class="tags">-->
+<!--            <span class="tag">Front-end</span>-->
+<!--            <span class="tag">Back-end</span>-->
+<!--        </div>-->
 <!--    </div>-->
-<!--  </div>-->
 
-<!--  &lt;!&ndash; Continue adapting the rest of the book sections similarly &ndash;&gt;-->
+<!--    <div class="book">-->
+<!--        <img class="book__image" src="images/The-Mobile-Web.png"-->
+<!--             alt="Cover of the book The Mobile Web: Responsive Design and Beyond for a Web Adapted to the Mobile World"/>-->
+<!--        <h2 class="book__title">-->
+<!--            The Mobile Web: Responsive Design and Beyond for a Web Adapted to the Mobile World-->
+<!--        </h2>-->
+<!--        <p class="book__description">Sérgio Lopes</p>-->
+<!--        <p class="book__price" id="price">$29.90</p>-->
+<!--        <div class="tags">-->
+<!--            <span class="tag">Front-end</span>-->
+<!--            <span class="tag">Back-end</span>-->
+<!--        </div>-->
+<!--    </div>-->
 
-</section>
+<!--    <div class="book">-->
+<!--        <img class="book__image" src="images/Front-end-Anthology.png" alt="Cover of the book Front-end Anthology:-->
+<!--      A Collection from the Brazilian Front-End Community"/>-->
+<!--        <h2 class="book__title">-->
+<!--            Front-end Anthology:-->
+<!--            A Collection from the Brazilian Front-End Community-->
+<!--        </h2>-->
+<!--        <p class="book__description">Multiple Authors</p>-->
+<!--        <p class="book__price" id="price">$29.90</p>-->
+<!--        <div class="tags">-->
+<!--            <span class="tag">Front-end</span>-->
+<!--            <span class="tag">Back-end</span>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="book">-->
+<!--        <img class="book__image" src="images/Front-End-Guide.png" alt="Cover of the book Front-End Guide:-->
+<!--    The Road to Becoming a Front-End Developer"/>-->
+<!--        <h2 class="book__title">-->
+<!--            Front-End Guide:-->
+<!--            The Road to Becoming a Front-End Developer-->
+<!--        </h2>-->
+<!--        <p class="book__description">Diego Eis</p>-->
+<!--        <p class="book__price" id="price">$29.90</p>-->
+<!--        <div class="tags">-->
+<!--            <span class="tag">Front-end</span>-->
+<!--            <span class="tag">Back-end</span>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="book">-->
+<!--        <img class="book__image" src="images/HTML-and-CSS3.png"-->
+<!--             alt="Cover of the book HTML5 and CSS3: Master the Web of the Future"/>-->
+<!--        <h2 class="book__title">-->
+<!--            HTML5 and CSS3: Master the Web of the Future-->
+<!--        </h2>-->
+<!--        <p class="book__description">Lucas Mazza</p>-->
+<!--        <p class="book__price" id="price">$29.90</p>-->
+<!--        <div class="tags">-->
+<!--            <span class="tag">Front-end</span>-->
+<!--            <span class="tag">Back-end</span>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="book">-->
+<!--        <img class="book__image" src="images/Bootstrap4.png" alt="Cover of the book Bootstrap 4:-->
+<!--      Discover the Most Used Front-End Library in the World"/>-->
+<!--        <h2 class="book__title">-->
+<!--            Bootstrap 4:-->
+<!--            Discover the Most Used Front-End Library in the World-->
+<!--        </h2>-->
+<!--        <p class="book__description">Natan Souza</p>-->
+<!--        <p class="book__price" id="price">$29.90</p>-->
+<!--        <div class="tags">-->
+<!--            <span class="tag">Front-end</span>-->
+<!--            <span class="tag">Back-end</span>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="book">-->
+<!--        <img class="book__image unavailable" src="images/Sass.png" alt="Cover of the book Sass:-->
+<!--      Learning CSS Preprocessors"/>-->
+<!--        <h2 class="book__title">-->
+<!--            Sass:-->
+<!--            Learning CSS Preprocessors-->
+<!--        </h2>-->
+<!--        <p class="book__description">Natan Souza</p>-->
+<!--        <p class="book__price" id="price">$29.90</p>-->
+<!--        <div class="tags">-->
+<!--            <span class="tag">Front-end</span>-->
+<!--            <span class="tag">Back-end</span>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="book">-->
+<!--        <img class="book__image" src="images/Turbocharge-Your-CSS.png" alt="Cover of the book Turbocharge Your CSS:-->
+<!--      Intelligent Style Sheets with Sass"/>-->
+<!--        <h2 class="book__title">-->
+<!--            Turbocharge Your CSS:-->
+<!--            Intelligent Style Sheets with Sass-->
+<!--        </h2>-->
+<!--        <p class="book__description">Rosicléia Frasson</p>-->
+<!--        <p class="book__price" id="price">$29.90</p>-->
+<!--        <div class="tags">-->
+<!--            <span class="tag">Front-end</span>-->
+<!--            <span class="tag">Back-end</span>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="book">-->
+<!--        <img class="book__image" src="images/Efficient-CSS.png" alt="Cover of the book Efficient CSS:-->
+<!--      Techniques and Tools That Make a Difference in Your Styles"/>-->
+<!--        <h2 class="book__title">-->
+<!--            Efficient CSS:-->
+<!--            Techniques and Tools That Make a Difference in Your Styles-->
+<!--        </h2>-->
+<!--        <p class="book__description">Rosicléia Frasson</p>-->
+<!--        <p class="book__price" id="price">$29.90</p>-->
+<!--        <div class="tags">-->
+<!--            <span class="tag">Front-end</span>-->
+<!--            <span class="tag">Back-end</span>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+<!--</section>-->
+
+
 <section id="total_value_available_books">
-  <div class="books__available">
-    <p>All available books for $ <span id="value">299.00</span></p>
-  </div>
+    <div class="books__available">
+        <p>All available books for $ <span id="value">299.00</span></p>
+    </div>
 </section>
 
 <footer class="footer">
-  <p>Alura - Dive into technology</p>
+    <p>Alura - Dive into technology</p>
 </footer>
 <script src="app/main.js"></script>
+<script src="app/forEach.js"></script>
+<script src="app/map.js"></script>
 </body>
 
 </html>
