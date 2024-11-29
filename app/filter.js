@@ -5,5 +5,7 @@ function filterBooks() {
     const btnElement = document.getElementById(this.id)
     const category = btnElement.value
     let filteredBooks = books.filter(book => book.categoria == category)
+    showBooksOnScreen(filteredBooks);
     console.table(filteredBooks);
+
 }
