@@ -1,6 +1,9 @@
 const elementInsertBooks = document.getElementById('books')
+const elementValueAllBooksAvailable = document.getElementById('total_value_available_books')
+
 
 function showBooksOnScreen(booksList) {
+    elementValueAllBooksAvailable.innerHTML = ''
     elementInsertBooks.innerHTML = ''
     booksList.forEach(book => {
     let availability = book.quantidade > 0 ? 'book__image' : 'book__image unavailable'
