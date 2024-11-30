@@ -1,165 +1,231 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,400&display=swap');
 
 :root {
-  --bg-color: #ffffff;
-  --button-color: #326589;
-  --text-title-color: #fc6621;
-  --text-description-color: #fc6621;
-  --text-price-color: #002f52;
-  --text-author-color: #858585;
-  --text-tag-color: #9c9c9c;
+    --bg-color: #ffffff;
+    --button-color: #326589;
+    --text-title-color: #fc6621;
+    --text-description-color: #fc6621;
+    --text-price-color: #002f52;
+    --text-author-color: #858585;
+    --text-tag-color: #9c9c9c;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--bg-color);
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
 .wrap {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 15px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .header {
-  text-align: center;
-  width: 100%;
-  background-color: var(--bg-color);
-  padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    background-color: var(--bg-color);
+    padding: 15px 0;
 }
 
 .banner {
-  background-image: url('/img/Banner-1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 278px;
+    background-image: url('/img/Banner-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 278px;
 }
 
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 4rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0 4rem 0;
 }
 
 .btn {
-  background-color: var(--button-color);
-  border: none;
-  cursor: pointer;
-  height: 44px;
-  text-decoration: none;
-  color: #fff;
-  padding: 10px 16px;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  transition: all 0.3s ease;
+    background-color: var(--button-color);
+    border: none;
+    cursor: pointer;
+    height: 44px;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-  color: #cecdcd;
-  border-radius: 10px;
-  border-bottom: 2px solid var(--text-description-color);
+    color: #cecdcd;
+    border-radius: 10px;
+    border-bottom: 2px solid var(--text-description-color);
 }
 
 .books {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .book {
-  width: 302px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 644px;
-  margin-bottom: 1rem;
+    width: 302px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 644px;
+    margin-bottom: 1rem;
 }
 
 .unavailable {
-  opacity: 0.3;
+    opacity: 0.3;
 }
 
 .book__title {
-  color: var(--text-title-color);
-  font-weight: 700;
-  font-size: 18px;
-  text-align: center;
-  line-height: 24px;
+    color: var(--text-title-color);
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    line-height: 24px;
 }
 
 .book__description {
-  text-align: center;
-  font-size: 18px;
-  color: var(--text-author-color);
-  margin: 1rem 0;
+    text-align: center;
+    font-size: 18px;
+    color: var(--text-author-color);
+    margin: 1rem 0;
 }
 
 .book__price {
-  text-align: center;
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--text-price-color);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-price-color);
 }
 
 .tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
-  margin-top: 1rem;
-  margin-left: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
 }
 
 .tag {
-  text-align: left;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text-tag-color);
-  padding: 5px 4px;
-  background: rgba(197, 197, 197, 0.25);
-  border-radius: 4px;
-  margin-right: 1rem;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-tag-color);
+    padding: 5px 4px;
+    background: rgba(197, 197, 197, 0.25);
+    border-radius: 4px;
+    margin-right: 1rem;
 }
 
 .books__available {
-  width: 100%;
-  height: 80px;
-  background-color: var(--text-description-color);
-  margin-top: 1rem;
-  text-align: center;
+    width: 100%;
+    height: 80px;
+    background-color: var(--text-description-color);
+    margin-top: 1rem;
+    text-align: center;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .books__available p {
-  color: #fff;
-  font-weight: 500;
-  line-height: 24px;
-  font-size: 2.5em;
+    color: #fff;
+    font-weight: 500;
+    line-height: 24px;
+    font-size: 2em;
+}
+
+.break-mobile {
+    display: none;
 }
 
 .footer {
-  width: 100%;
-  height: 104px;
-  background: linear-gradient(96.48deg, #002f52 36.3%, #326589 99.56%);
-  margin-top: 1rem;
-  text-align: center;
+    width: 100%;
+    height: 104px;
+    background: linear-gradient(96.48deg, #002f52 36.3%, #326589 99.56%);
+    margin-top: 1rem;
+    text-align: center;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer p {
-  color: #fff;
-  font-weight: 500;
-  line-height: 24px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        justify-items: center;
+        padding: 0.5rem 0;
+        margin-top: -2rem;
+    }
+
+    .nav li {
+        list-style: none;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 200px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 12px 16px;
+    }
+
+    .nav li:nth-child(5) {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    .books {
+        justify-content: center;
+    }
+
+    .banner {
+        height: 150px;
+        background-size: contain;
+    }
+
+    .books__available {
+        width: 100%;
+        height: auto;
+        font-size: small;
+        padding: 1rem;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .books__available p {
+        font-size: 1.6em;
+        line-height: 1.4;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .break-mobile {
+        display: inline;
+    }
 }
