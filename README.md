@@ -4,7 +4,7 @@ This project was developed as part of the **Alura course**: *JavaScript: Array M
 
 ## 🌐 Live Demo
 
-Explore the live version here: [AluraBooks](https://example-vercel-link.vercel.app/)
+Explore the live version here: [AluraBooks](https://alura-books-js-xi.vercel.app/)
 
 ## 🖼️ Preview
 
