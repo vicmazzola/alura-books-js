@@ -2,7 +2,9 @@ const elementInsertBooks = document.getElementById('books')
 const elementValueAllBooksAvailable = document.getElementById('total_value_available_books')
 
 
+
 function showBooksOnScreen(booksList) {
+    console.log("Before clearing: ", document.getElementById('total_value_available_books'));
     elementValueAllBooksAvailable.innerHTML = ''
     elementInsertBooks.innerHTML = ''
     booksList.forEach(book => {
@@ -17,6 +19,7 @@ function showBooksOnScreen(booksList) {
           <span class="tag">${book.categoria}</span>
           </div>
   </div>`
-    })
+    });
+    console.log("After clearing: ", document.getElementById('total_value_available_books'));
 }
 

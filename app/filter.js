@@ -8,10 +8,12 @@ function filterBooks() {
     let filteredBooks = category === 'available' ? filterByAvailability() : filterByCategory(category)
     showBooksOnScreen(filteredBooks);
 
-    if (category == 'available') {
-        const totalValue = sumAllValues(filteredBooks)
+    if (category === 'available') {
+        const totalValue = sumAllValues(filteredBooks);
         console.log('Total Value:', totalValue);
         showAllValueBooksAvailable(totalValue)
+    } else {
+        elementValueAllBooksAvailable.innerHTML = '';
     }
 
 }
@@ -19,6 +21,7 @@ function filterBooks() {
 function sumAllValues(filteredBooks) {
     return filteredBooks.reduce((total, book) => total + book.preco, 0);
 }
+
 
 
 function filterByCategory(category) {
@@ -32,9 +35,10 @@ function filterByAvailability() {
 
 
 function showAllValueBooksAvailable(totalValue) {
+    console.log("Updating total_value_available_books:", totalValue);
     elementValueAllBooksAvailable.innerHTML = `
     <div class="books__available">
-            <p>All available books for $ <span id="valor">${totalValue}</span></p>
+            <p>All available books for $ <span id="valor">${totalValue.toFixed(2)}</span></p>
         </div>`;
 
 
