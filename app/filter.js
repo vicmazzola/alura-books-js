@@ -34,7 +34,7 @@ function showAllValueBooksAvailable(totalValue) {
     console.log("Updating total_value_available_books:", totalValue);
     elementValueAllBooksAvailable.innerHTML = `
     <div class="books__available">
-            <p>All available books for $ <span id="valor">${totalValue.toFixed(2)}</span></p>
+            <p>All available books for R$<span id="valor">${totalValue.toFixed(2)}</span></p>
         </div>`;
 
 
